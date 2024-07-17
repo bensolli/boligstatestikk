@@ -38,7 +38,7 @@ body {
 }
 
 .col-1 h2{
-    margin: 20px 0 0 0;
+    margin: 23px 0 0 0;
     font-size: 37px;
     font-weight: 700;
 }
@@ -62,7 +62,6 @@ body {
 
 
 #cityData{
-    margin-left: 70px;
     position: absolute;
     width: 100%;
 }
@@ -111,14 +110,14 @@ select::-ms-expand {
 }
 
 
-.theNumberchange-negative, .theNumberchange-positive, .numberValue-0, .numberValue-1  {
+.theNumberchange-negative, .theNumberchange-positive  {
     position: relative; 
 }
 
-.theNumberchange-negative::before, .theNumberchange-positive::before, .numberValue-0::before, .numberValue-1::before {
+.theNumberchange-negative::before, .theNumberchange-positive::before {
     content: "";
     position: absolute;
-    left: -60px;
+    left: -55px;
     top: 0;
     width: 85%;
     height: 85%;
@@ -132,14 +131,6 @@ select::-ms-expand {
 
 .theNumberchange-positive::before {
     background-image: url(./image/positive-arrow.svg);
-}
-
-.numberValue-0::before  {
-    background-image: url(./image/property-m3.svg);
-}
-
-.numberValue-1::before  {
-    background-image: url(./image/property.svg);
 }
 
 

@@ -32,12 +32,6 @@ async function dataSet() {
 function populateSelect(data) {
     const selectElement = document.getElementById('citySelect');
 
-    /* Check if data is not an object
-    if (typeof data !== 'object' || data === null) {
-        console.error('Error: Data is not an object or is null');
-        return;
-    }*/
-
     selectElement.innerHTML = '';
 
     Object.keys(data).forEach(cityName => {
@@ -97,6 +91,7 @@ function displayCityPriceData(cityData) {
 
     const header = document.createElement('h2');
     header.textContent = cityDataAddPercent;
+    header.style.marginLeft = "55px";
 
     if (!isNaN(cityDataColor) && cityDataColor > 0) {
         header.style.color = "#65B970";
@@ -150,15 +145,12 @@ function displayCityPriceData(cityData) {
     cityDataContainer.appendChild(numberValue);
     cityDataContainer.appendChild(numberTitle);
 
-    //Adding class to add icon //
-    numberValue.classList.add(`numberValue-${index}`);
-    numberTitle.classList.add(`numberTitle-${index}`);
 });
 
 
 }
 
-
+/*
 function averageM2(result) {
     const addAverageNumberElements = document.getElementsByClassName("numberTitle-0");
 
@@ -182,7 +174,7 @@ function averageM2(result) {
             element.textContent += ` ( ${averageM2Value.toFixed(0)} m2 )`; // Display the average rounded to the nearest integer
         }
     }
-}
+}*/
 
 
 
