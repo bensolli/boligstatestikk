@@ -6,14 +6,16 @@
 let data = {};
 
 const apiUrl = 'https://cors-anywhere.herokuapp.com/https://ommu1982.pythonanywhere.com/static/boligprisstatistikk.json';
+const apiJson = 'https://benni-boligstatestikk.netlify.app/api.json';
 
 async function dataSet() {
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiJson);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
-        }
+
+        } 
 
         data = await response.json();
         console.log('Fetched data:', data);
